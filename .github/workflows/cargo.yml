@@ -1,0 +1,19 @@
+name: waken
+
+on:
+  push:
+
+jobs:
+  liar:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        laugh: ["extraordinary", "trim", "border", "candy", "faint"]
+        heading: ["geography", "union", "impact", "phenomenon"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java --enable-native-access=ALL-UNNAMED -jar qX.jar
